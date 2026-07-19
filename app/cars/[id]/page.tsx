@@ -34,12 +34,7 @@ import { useRecentlyViewed } from '@/hooks/useFavorites';
 import { cn } from '@/lib/utils';
 
 interface PageProps {
-  params: { id: string };
-}export function generateStaticParams() {
-  return vehicles.map((vehicle) => ({
-    id: vehicle.id,
-  }));
-}
+  params: { id: string };} 
 
 export default function VehicleDetailPage({ params }: PageProps) {
   const { id } = params;
