@@ -35,6 +35,10 @@ import { cn } from '@/lib/utils';
 
 interface PageProps {
   params: { id: string };
+}export function generateStaticParams() {
+  return vehicles.map((vehicle) => ({
+    id: vehicle.id,
+  }));
 }
 
 export default function VehicleDetailPage({ params }: PageProps) {
